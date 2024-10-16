@@ -11,9 +11,8 @@ int removeDuplicates(int* nums, int numsSize) {
             }
             nums[i - counter] = nums[i];
             k++;
-
         } 
-        else if (nums[i] == nums[i - 1]) 
+        else if (nums[i] == nums[i - 1]) //dup num
         {
             counter++;
         } 
