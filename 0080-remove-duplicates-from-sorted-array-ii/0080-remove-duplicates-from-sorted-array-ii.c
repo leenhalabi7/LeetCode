@@ -7,20 +7,19 @@ int removeDuplicates(int* nums, int numsSize) {
         {
             counter++;
         } 
-        else //new num after non-dup num 
+        else 
         {
-            if (nums[i] == nums[i - 1])
+            if (nums[i] == nums[i - 1]) //num reached max dup
             {
                 couple_on = true;
             }
-            else 
+            else //new num - first appearience
             {
                 couple_on = false;
             }
             nums[i - counter] = nums[i];
             k++;
         } 
-        
     }
     return k;
 }
