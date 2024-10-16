@@ -1,7 +1,7 @@
 int removeDuplicates(int* nums, int numsSize) {
     bool couple_on = false;
     short counter = 0, k = 1;
-    for (short i = 1; i < (short)numsSize; i++) 
+    for (short i = 1; i < numsSize; i++) 
     {
         if (nums[i] == nums[i - 1] && couple_on ) //dup num
         {
