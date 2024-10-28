@@ -4,7 +4,7 @@ public:
     
     for( int i = n; i > 0; i--)
     {
-        if( n%(i) == 0)
+        if( n%i == 0)
         {
             k--;
             if( k == 0)
