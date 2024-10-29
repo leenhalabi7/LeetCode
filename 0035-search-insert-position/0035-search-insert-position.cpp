@@ -13,32 +13,14 @@ public:
             if(nums[mid] > target)
             {
                 
-                if(mid == 0 )
-                {
-                    return 0; //target not found - insert in the begining
-                }
-                //greater num on the right, smaller num on the left
-                else if(nums[mid-1] < target ) 
-                {
-                    return mid; //target not found - insert between two nums 
-                }
-                high = mid; 
+                high = mid-1; 
             }
-            if(nums[mid] < target) 
+            else //nums[mid] < target
             {
-                if(mid == nums.size()-1 )
-                {
-                    return nums.size(); //target not found - insert in the end
-                }
-                //greater num on the right, smaller num on the left
-                else if(nums[mid+1] > target) 
-                {
-                    return mid+1; //target not found - insert between two nums 
-                }
                 low = mid+1; 
             }
         }
-        return 0; 
+        return low; 
     }
     
 };
